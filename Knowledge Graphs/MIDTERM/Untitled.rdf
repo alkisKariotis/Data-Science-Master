@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasIngridient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isBaseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasIngridient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasIngridient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isIngridientOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasIngridient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isToppingOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isIngridientOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isIngridientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isIngridientOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isToppingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#isIngridientOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#AmericanaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#AmericanaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#DeepPanBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ThinAndCrispyBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#MargaritaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#MargaritaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#NamedPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ProbeIncosistentTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ProbeIncosistentTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCheese"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingAnchovy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingAnchovy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSeafood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCaper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCaper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCheese -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCheese">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingGreenPepper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingGreenPepper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingHam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingHam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMeat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingJalapenoPepper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingJalapenoPepper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMozzarella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMozzarella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCheese"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingParmezan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMushroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMushroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOlive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOlive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOnion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOnion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingParmezan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingParmezan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCheese"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepperoni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepperoni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMeat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPrawn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPrawn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSeafood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingRedPepper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingRedPepper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSalami -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSalami">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMeat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSeafood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSeafood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSpicyBeef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSpicyBeef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMeat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTomato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTomato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTuna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTuna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSeafood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#alkisPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#alkisPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCaper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMushroom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOlive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOnion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepperoni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSalami"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#Pizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaBase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#PizzaTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingAnchovy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPrawn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTuna"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCaper"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMushroom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOlive"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingOnion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepper"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingTomato"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingCheese"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingMeat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSeafood"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingVegetable"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingGreenPepper"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingJalapenoPepper"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingRedPepper"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingHam"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingPepperoni"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSalami"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alkis/ontologies/2024/5/untitled-ontology-3#ToppingSpicyBeef"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
